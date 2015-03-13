@@ -1,0 +1,11 @@
+<h1><%= @restaurant.name %></h1>
+<p>Description: <%= @restaurant.description %>
+<p>Address: <%= @restaurant.address %>
+<p>Phone: <%= @restaurant.phone %>
+
+<p><img src= "<%= @gmap %>">
+
+
+<p> <%= link_to "Edit", edit_restaurant_path(@restaurant) %>
+<p> <%= link_to "Back", restaurants_path %>
+
