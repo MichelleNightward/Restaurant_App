@@ -1,0 +1,18 @@
+require './app/models/users.rb'
+
+describe User, '#pass' do
+  it "passes test when true" do
+    user = User.new
+
+    grade = user.pass(true)
+
+    expect(grade).to be_truthy
+  end
+  it "fails test when false" do
+    user = User.new
+
+    grade = user.pass(false)
+
+    expect(grade).to be_falsey
+  end
+end
