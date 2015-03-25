@@ -1,14 +1,7 @@
-class User
+class User < ActiveRecord::Base
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
 
-  def pass(status)
-    true
-  end
-  
-  def score(grade)
-    if(grade = "A" || grade = "B" || grade = "C" || grade = "D")
-      true
-    else
-      false
-    end
-  end
 end
